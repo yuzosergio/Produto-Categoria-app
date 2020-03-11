@@ -1,0 +1,36 @@
+<table class="table table-hover">
+    
+    <tr style="font-weight: 500;">
+
+        <td>ID</td>
+        <td>TITULO</td>
+        <td>PREÇO</td>
+        <td>DESCRIÇÃO</td>
+        <td>CATEGORIA</td>
+        <td style="color:blue;">EDITAR</td>
+        <td style="color:red;">DELETAR</td>
+
+    </tr>
+    <tr *ngFor="let prod of allProduto">
+        <td>{{prod.id}}</td>
+        <td>{{prod.titulo}}</td>
+        <td>{{prod.preco}}</td>
+        <td>{{prod.descricao}}</td>
+        <td>{{prod.categoria}}</td>
+        <td>
+
+            <a class="btn" (click)="edit(prod)">
+                <i class="fa fa-edit"></i>
+            </a>
+
+        </td>
+        <td>
+
+            <a class="btn text-danger" (click)="deleteProduto(prod.id)">
+                <i class="fa fa-trash"></i>
+            </a>
+
+        </td>
+    </tr>
+
+</table>

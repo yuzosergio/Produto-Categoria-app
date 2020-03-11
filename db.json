@@ -1,0 +1,58 @@
+{
+  "Produto": [
+    {
+      "id": 1,
+      "descricao": "Informática"
+    },
+    {
+      "id": 3,
+      "descricao": "Móveis"
+    },
+    {
+      "id": 4,
+      "descricao": "Material"
+    },
+    {
+      "id": 5,
+      "descricao": "Automóvel"
+    }
+  ],
+  "Categoria": [
+    {
+      "id": 1,
+      "titulo": "Computador",
+      "preco": "5000",
+      "descricao": "notebook",
+      "categoria": [
+        {
+          "id": "1",
+          "descricao": "Informática"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Caneta",
+      "preco": "3.00",
+      "descricao": "azul",
+      "categoria": [
+        {
+          "id": 4,
+          "descricao": "Material"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Sofá",
+      "preco": "3000",
+      "descricao": "2 lugar",
+      "categoria": [
+        {
+          "id": 3,
+          "descricao": "Moveis"
+        }
+      ]
+    }
+  ]
+}
