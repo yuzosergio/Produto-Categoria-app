@@ -16,7 +16,7 @@ export class ProdutoService {
     titulo:'',
     preco:null,
     descricao:'',
-    categoria:null, 
+    categoria: null, 
   }
   
   constructor(
