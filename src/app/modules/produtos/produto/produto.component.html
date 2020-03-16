@@ -33,17 +33,18 @@
 <div class="row">
 
     <div class="col-md-6">
-        <!--
-          <select [(ngModel)]="emp">
-            <option *ngFor="let emp of allEmployee" [value]="emp.descricao">{{emp.descricao}}</option>
-          </select> -->
-        <select [(ngModel)]="produtoService.currentProduto.categoria" style="margin-bottom: 15px; border-radius: 10px;">
+       
+        <select [(ngModel)]="produtoService.currentProduto.categoria">
+            <option *ngFor="let cat of categorias" [value]="produtoService.currentProduto.categoria">{{cat.descricao}}</option>
+        </select> 
+
+        <!-- <select [(ngModel)]="produtoService.currentProduto.categoria" style="margin-bottom: 15px; border-radius: 10px;">
             <option>Selecione categoria...</option>
             <option>Informatica</option>
             <option>Material</option>
             <option>Móvel</option>
-        </select>
-
+        </select> -->
+ 
     </div>
 
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../shared/produto.service';
 import { Produto } from 'src/app/model/produto.model';
+import { CategoriaService } from '../../shared/categoria.service';
+import { Categoria } from 'src/app/model/categoria.model';
 
 @Component({
   selector: 'app-produto',
@@ -10,11 +12,17 @@ import { Produto } from 'src/app/model/produto.model';
 
 export class ProdutoComponent implements OnInit {
 
+  categorias: Categoria[];
+
   constructor(
-    public produtoService: ProdutoService
+    public produtoService: ProdutoService,
+    public categoriaService: CategoriaService
   ) { }
 
   ngOnInit() {
+    this.categoriaService
+      .getAllCategoria()
+      .subscribe(c => this.categorias = c);
   }
 
   createAndUpdate(currentProduto: Produto) {

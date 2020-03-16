@@ -4,6 +4,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoListComponent } from './produto-list/produto-list.component';
 import { ProdutoService } from '../shared/produto.service';
 import {FormsModule} from '@angular/forms';
+import { CategoriaService } from '../shared/categoria.service';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import {FormsModule} from '@angular/forms';
   ],
   declarations: [ProdutoComponent, ProdutoListComponent],
   exports:[ProdutoComponent, ProdutoListComponent],
-  providers: [ProdutoService]
+  providers: [ProdutoService, CategoriaService]
 })
 export class ProdutosModule { }
